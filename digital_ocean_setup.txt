@@ -1,0 +1,14 @@
+adduser test && gpasswd -a test sudo && su - test
+
+mkdir .ssh && chmod 700 .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNGLwaW11TG5ZI9ByzlucUvbt8xMmStKdZo7hnKoh9NyXfo9oKwME1eiZQmgDPATElDorTdiGhon17thO2B3sHKoXN6AMwRWiJ4biSjhHtqpRYYwbv0Vr9v81ogbyyHztirgB6GjRzBaIWA9li2y2WLjd3JW2vDlBELaUA8gF/hc1qaOKVcoTfDW8KJTq2ttkqBZc9jturVLlkPtvdKYkzBdqpJPLu7yfN6cYoc0HSuFWXVF6HWFOSRMz0NnEUW//ynuoy+ayEM4bwI7duTcNaU1EgVNhBOdlPa7gyWiTTnyRdZVvJa7efpUS4QwMrK1GkcxVWHo2XqPmij2C6L3pZ Teresa@MAMA_Komp_AZUS" > .ssh/authorized_keys && chmod 600 .ssh/authorized_keys && exit
+
+nano /etc/ssh/sshd_config
+PermitRootLogin yes -> no
+
+service ssh restart && exit
+
+
+ssh test@
+
+
+sudo apt-get -y install python-software-properties && sudo  add-apt-repository -y ppa:webupd8team/java && sudo apt-get -y update && sudo apt-get -y install oracle-java8-installer && mkdir workspace && cd workspace && git clone https://github.com/franc90/age-hz-starter.git && git clone https://github.com/franc90/age-akka-starter.git && git clone https://github.com/franc90/age-zk-starter.git && cd age-hz-starter/ && ./gradlew build &&  cd ../age-akka-starter/ && ./gradlew build && cd ../age-zk-starter/ && ./gradlew build && ./unpack
