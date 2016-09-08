@@ -3,8 +3,8 @@ import numpy
 import glob
 import matplotlib.pyplot as plt
 
-# folders = ['hz/ini_rmv/']
-folders = ['zk/ini_rmv1/', 'zk/ini_rmv2/']
+folders = ['hz/ini_rmv/']
+# folders = ['zk/ini_rmv1/', 'zk/ini_rmv2/']
 
 exts = {}
 rmvs = {}
@@ -63,6 +63,7 @@ print(max(add_time))
 print ('95:  ' + str(numpy.percentile(add_time, 95)))
 print ('99:  ' + str(numpy.percentile(add_time, 99)))
 print ('avg: ' + str(numpy.average(add_time)))
+print ('std: ' + str(numpy.std(add_time)))
 
 print (add_time)
 

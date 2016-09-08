@@ -28,6 +28,7 @@ with open('rcvs.csv', 'rb') as rcvs:
     print ('95:  ' + str(numpy.percentile(sorted_list, 95)))
     print ('99:  ' + str(numpy.percentile(sorted_list, 99)))
     print ('avg: ' + str(numpy.average(sorted_list)))
+    print ('std: ' + str(numpy.std(sorted_list)))
 
     hist, bin_edges = numpy.histogram(sorted_list, bins=numpy.arange(start=1, stop=max(sorted_list) + 1))
 
